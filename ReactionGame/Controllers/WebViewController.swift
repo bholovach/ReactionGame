@@ -2,7 +2,7 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
-
+    
     var url = ""
     
     @IBOutlet weak var webView: WKWebView!
@@ -13,6 +13,5 @@ class WebViewController: UIViewController {
             let request = URLRequest(url: url)
             webView.load(request)
         }
-        
     }
 }

@@ -41,20 +41,24 @@ class GameViewController: UIViewController {
         }
         
     }
+    
     func onRulesAccept(alert: UIAlertAction!) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: "isRulesAccepted")
     }
+    
     @objc func gameOver() {
         showWebView(url: loserUrl)
         resetGameValues()
     }
+    
     func resetGameValues() {
         startGameLabel.isHidden = false
         removeAim()
         counter = 0
         timer?.invalidate()
     }
+    
     func showWebView(url: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "WebViewController") as! WebViewController
@@ -63,17 +67,17 @@ class GameViewController: UIViewController {
     }
     
     @objc func tapAim() {
-        if counter > 10 {
-            return
-        } else if counter == 10 {
+        if counter == 10 {
             showWebView(url: winnerUrl)
             resetGameValues()
-        } else {
+        }
+        if counter < 10 {
             counter += 1
             removeAim()
             renderAim()
         }
     }
+    
     func renderAim() {
         let image = UIImage(named: "aim")
         imageView = UIImageView(image: image!)
@@ -88,6 +92,7 @@ class GameViewController: UIViewController {
         imageView.addGestureRecognizer(tap)
         view.addSubview(imageView)
     }
+    
     func removeAim() {
         imageView.removeFromSuperview()
     }
