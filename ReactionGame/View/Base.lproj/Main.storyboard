@@ -31,10 +31,6 @@
                                     <action selector="startGameButton:" destination="Mca-S2-6YP" eventType="touchUpInside" id="Jja-sG-xch"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z04-VO-A1d">
-                                <rect key="frame" x="40" y="88" width="74" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Zh-VD-2Ur"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -49,15 +45,49 @@
                             <constraint firstItem="79g-HJ-Tbm" firstAttribute="bottom" secondItem="0Zh-VD-2Ur" secondAttribute="bottom" id="iMS-Yr-Kue"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Dho-5j-CWq"/>
+                    <navigationItem key="navigationItem" id="Dho-5j-CWq">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="startGameLabel" destination="Xao-G1-MvM" id="VjO-70-OmG"/>
                         <outlet property="webView" destination="79g-HJ-Tbm" id="rpp-Oo-wXu"/>
+                        <segue destination="epm-6j-hL5" kind="show" id="03N-vd-IN7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxL-mc-vV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="879.71014492753625" y="101.78571428571428"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Wn3-sS-EUO">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="epm-6j-hL5" customClass="WebViewController" customModule="ReactionGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AnD-oc-nVw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8g-BI-Fe2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dQj-Wr-1zd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N8g-BI-Fe2" firstAttribute="top" secondItem="dQj-Wr-1zd" secondAttribute="top" id="CfQ-Jn-TS8"/>
+                            <constraint firstItem="dQj-Wr-1zd" firstAttribute="bottom" secondItem="N8g-BI-Fe2" secondAttribute="bottom" id="ZSn-cn-F93"/>
+                            <constraint firstItem="N8g-BI-Fe2" firstAttribute="leading" secondItem="dQj-Wr-1zd" secondAttribute="leading" id="l7p-jF-3pF"/>
+                            <constraint firstItem="dQj-Wr-1zd" firstAttribute="trailing" secondItem="N8g-BI-Fe2" secondAttribute="trailing" id="uX5-ZY-4ha"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xeo-gy-CuR"/>
+                    <connections>
+                        <outlet property="webView" destination="N8g-BI-Fe2" id="cMZ-hz-lTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3Z-Gl-bZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofZ-vR-lXK">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52137F032736A014009294E9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52137F022736A014009294E9 /* WebViewController.swift */; };
 		5252C5A02734387300C35826 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C59F2734387300C35826 /* AppDelegate.swift */; };
 		5252C5A22734387300C35826 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5A12734387300C35826 /* SceneDelegate.swift */; };
 		5252C5A72734387300C35826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252C5A52734387300C35826 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52137F022736A014009294E9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5252C59C2734387300C35826 /* ReactionGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactionGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5252C59F2734387300C35826 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5252C5A12734387300C35826 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5252C5B627343B5600C35826 /* GameViewController.swift */,
+				52137F022736A014009294E9 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5252C5BD2735313700C35826 /* Model.swift in Sources */,
+				52137F032736A014009294E9 /* WebViewController.swift in Sources */,
 				5252C5A02734387300C35826 /* AppDelegate.swift in Sources */,
 				5252C5B727343B5600C35826 /* GameViewController.swift in Sources */,
 				5252C5A22734387300C35826 /* SceneDelegate.swift in Sources */,
