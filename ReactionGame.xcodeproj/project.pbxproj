@@ -14,6 +14,8 @@
 		5252C5AC2734387500C35826 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252C5AA2734387500C35826 /* LaunchScreen.storyboard */; };
 		5252C5B727343B5600C35826 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5B627343B5600C35826 /* GameViewController.swift */; };
 		5252C5BA27343F0000C35826 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5B927343F0000C35826 /* Networking.swift */; };
+		5252C5BD2735313700C35826 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5BC2735313700C35826 /* Model.swift */; };
+		5252C5C22735989900C35826 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 5252C5C12735989900C35826 /* Algorithms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		5252C5AD2734387500C35826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5252C5B627343B5600C35826 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5252C5B927343F0000C35826 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		5252C5BC2735313700C35826 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5252C5C22735989900C35826 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 		5252C59E2734387300C35826 /* ReactionGame */ = {
 			isa = PBXGroup;
 			children = (
+				5252C5BB2735312A00C35826 /* Model */,
 				5252C5B827343EDD00C35826 /* Networking */,
 				5252C5B5273438E400C35826 /* Supporning Files */,
 				5252C5B42734388A00C35826 /* Controllers */,
@@ -102,6 +107,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		5252C5BB2735312A00C35826 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5252C5BC2735313700C35826 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +131,9 @@
 			dependencies = (
 			);
 			name = ReactionGame;
+			packageProductDependencies = (
+				5252C5C12735989900C35826 /* Algorithms */,
+			);
 			productName = ReactionGame;
 			productReference = 5252C59C2734387300C35826 /* ReactionGame.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 5252C5932734387300C35826;
+			packageReferences = (
+				5252C5C02735989900C35826 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 5252C59D2734387300C35826 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5252C5BD2735313700C35826 /* Model.swift in Sources */,
 				5252C5A02734387300C35826 /* AppDelegate.swift in Sources */,
 				5252C5B727343B5600C35826 /* GameViewController.swift in Sources */,
 				5252C5A22734387300C35826 /* SceneDelegate.swift in Sources */,
@@ -394,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5252C5C02735989900C35826 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5252C5C12735989900C35826 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5252C5C02735989900C35826 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5252C5942734387300C35826 /* Project object */;
 }
